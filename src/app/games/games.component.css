@@ -1,0 +1,94 @@
+html{
+  background-color: #E9EBEE;
+  font-family: arial;
+  height: 100%;
+}
+
+.container{
+  width: 80%;
+  min-width: 1000px;
+  margin: auto;
+  background-color: #fff;
+  height: 100%;
+}
+.innerContainer{
+  margin: 0px 15px;
+}
+nav li a{
+  padding: 20px 15px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+nav li {
+  display: inline;
+}
+
+nav{
+  padding: 20px 0px;
+  background-color: #47484B;
+  margin-bottom: 5px;
+}
+
+nav li a:hover {
+  background-color: #BB5A2C;
+}
+
+.gameTableDiv{
+  width: 45%;
+  min-width: 500px;
+  border-style: solid;
+  border-color: #E9EBEE;
+  border-width: 1px;
+  margin-bottom: 15px;
+  margin-top: 5px;
+}
+
+.gameTableDiv .buttonContainer{
+  margin: 10px;
+}
+
+.gameTable{
+  margin: 15px;
+}
+
+.gameTable th{
+  vertical-align: top;
+  font-size: 1.5em;
+}
+
+.gameTable td{
+  vertical-align: middle;
+}
+
+.gameFlexContainer{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.userH{
+  text-align: center;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.userDiv{
+  margin: 20px 0px;
+}
+
+.buttonContainer{
+  margin: 10px 0px;;
+}
+
+.button{
+  font-family: arial;
+  font-size: 1em;
+  border: none;
+  text-decoration: none;
+  background-color:#BB5A2C;
+  color: #fff;
+  padding: 5px;
+}

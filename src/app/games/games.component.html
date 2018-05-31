@@ -1,0 +1,56 @@
+
+<h1>All users</h1>
+<div *ngFor="let user of users">
+  <div class="userDiv">
+  <h2 class="userH">{{user.username}} (id: {{user.id}})</h2>
+  <div *ngFor="let game of user.games" class="gameFlexContainer">
+    <div class="gameTableDiv">
+    <table id="${game.id}" class="gameTable">
+      <tr>
+        <th>{{game.name}}</th>
+      </tr>
+      <tr>
+        <td>
+          Online rating: {{game.onlineRating}}
+        </td>
+        <td rowspan="2"><img src="{{game.coverUrl}}"></td>
+      </tr>
+      <tr>
+        <td>
+          Personal rating: {{game.personalRating}}
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">{{game.summary}}</td>
+      </tr>
+    </table>
+    <div class="buttonContainer">
+      <button (click)="deleteGame(game.id)" class="button">Delete</button>
+    </div>
+    </div>
+  </div>
+  </div>
+</div>
+
+<h1>Add a new game!</h1>
+<p>
+  <label for="inputName">Name:</label>
+  <input type="text" name="inputName" id="inputName" (keyup)="onNameKeyUp($event)">
+</p>
+<p>
+  <label for="inputSummary">Summary:</label>
+  <input type="text" name="inputSummary" id="inputSummary" (keyup)="onSummaryKeyUp($event)">
+</p>
+<p>
+  <label for="inputCoverUrl">Cover url:</label>
+  <input type="text" name="inputCoverUrl" id="inputCoverUrl" (keyup)="onCoverUrlKeyUp($event)">
+</p>
+<p>
+  <label for="inputPersonalRating">Personal rating:</label>
+  <input type="number" name="inputPersonalRating" id="inputPersonalRating" (keyup)="onPersonalRatingKeyUp($event)">
+</p>
+<p>
+  <label for="inputOwnerId">Owner's userid:</label>
+  <input type="number" name="inputOwnerId" id="inputOwnerId" (keyup)="onOwnerIdKeyUp($event)">
+</p>
+<button (click)="addGame()">Add game</button>
